@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.cheftastic"
+    android:versionCode="1"
+    android:versionName="@string/version_number">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="app.cheftastic.vanilla.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CheftasticTheme">
+        <activity
+            android:name="app.cheftastic.vanilla.LoadDataActivity"
+            android:label="@string/app_name"
+            android:theme="@style/CheftasticTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="app.cheftastic.vanilla.WeeklyMenuActivity"
+            android:label="@string/weekly_menu" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.RecipeSearchActivity"
+            android:label="@string/recipes" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.SettingsActivity"
+            android:label="@string/settings" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.RecipeInfoActivity"
+            android:label="@string/recipe_info" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.RecipeSelectorActivity"
+            android:label="@string/select_a_recipe" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.NutritionalInfoActivity"
+            android:label="@string/nutritional_information" />
+
+        <activity
+            android:name="app.cheftastic.vanilla.AboutActivity"
+            android:label="@string/application_information" />
+    </application>
+</manifest>

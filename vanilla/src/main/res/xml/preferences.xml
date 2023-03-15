@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:picker="http://schemas.android.com/apk/res/app.cheftastic">
+
+    <PreferenceCategory
+        android:key="settings_recipes_and_menus"
+        android:title="@string/recipes_and_menu">
+        <app.cheftastic.vanilla.widgets.numberPicker.NumberPickerPreference
+            android:key="number_of_people"
+            android:summary="@string/we_will_cook_for_one_person"
+            android:title="@string/People"
+            picker:defaultValue="1"
+            picker:endRange="10"
+            picker:startRange="1" />
+
+        <CheckBoxPreference
+            android:key="keep_selected_recipes"
+            android:summaryOff="@string/meals_already_set_will_be_remove_and_all_will_be_added"
+            android:summaryOn="@string/meals_already_set_will_be_kept_and_the_rest_will_be_added"
+            android:title="@string/keep_always_selected_recipes" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="others"
+        android:title="@string/others">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="use_only_wifi"
+            android:summaryOff="@string/data_connection_will_be_used_to_download_new_recipes"
+            android:summaryOn="@string/data_connection_wont_be_used_to_download_new_recipes"
+            android:title="@string/update_data_only_with_wifi" />
+    </PreferenceCategory>
+</PreferenceScreen>

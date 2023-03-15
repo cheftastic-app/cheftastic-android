@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheftastic</string>
+    <string name="version_number">0.1.0</string>
+    <string name="email">cheftastic.app@gmail.com</string>
+    <string name="difficulty_1">Muy fácil</string>
+    <string name="difficulty_2">Fácil</string>
+    <string name="difficulty_3">Normal</string>
+    <string name="difficulty_4">Difícil</string>
+    <string name="difficulty_5">Muy difícil</string>
+    <string name="serve_hot">Servir caliente</string>
+    <string name="serve_cold">Servir frío</string>
+    <string name="weekly_menu">Menú semanal</string>
+    <string name="recipes">Recetas</string>
+    <string name="settings">Ajustes</string>
+    <string name="recipe_info">Ficha de recipe</string>
+    <string name="select_a_recipe">Seleccione una recipe</string>
+    <string name="nutritional_information">Información nutricional</string>
+    <string name="application_information">Información sobre Cheftastic</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="name">Nombre</string>
+    <string name="description">Descripción</string>
+    <string name="dummy_integer">120</string>
+    <string name="minutes">minutos</string>
+    <string name="ingredient">Ingrediente</string>
+    <string name="product_type_nutritional_group">Tipo de producto | Grupo nutricional</string>
+    <string name="zero_integer">0</string>
+    <string name="recipe_step_description">Descripción del paso de la recipe</string>
+    <string name="unit_of_measurement">unidad de medida</string>
+    <string name="unit_of_time">unidad de duration</string>
+    <string name="fifty_percent">50%</string>
+    <string name="loading_data_message">Encendiendo la luz de la nevera</string>
+    <string name="verification_indicator">Indica si la recipe ha sido revisada</string>
+    <string name="gluten_free_indicator">Indica si la recipe no contiene gluten</string>
+    <string name="vegetarian_indicator">Indica si la recipe es apta para una dieta vegetariana</string>
+    <string name="recipe">Receta</string>
+    <string name="ingredients">Ingredientes</string>
+    <string name="elaboration">Preparación</string>
+    <string name="time_of_cook">Tiempo de preparación</string>
+    <string name="difficulty">Dificultad</string>
+    <string name="presentation">Presentación</string>
+    <plurals name="ingredients_for_x_people">
+        <item quantity="one">ingredientes para %d persona</item>
+        <item quantity="other">ingredientes para %d personas</item>
+    </plurals>
+    <string-array name="month_abbreviations">
+        <item>ENE</item>
+        <item>FEB</item>
+        <item>MAR</item>
+        <item>ABR</item>
+        <item>MAY</item>
+        <item>JUN</item>
+        <item>JUL</item>
+        <item>AGO</item>
+        <item>SEP</item>
+        <item>OCT</item>
+        <item>NOV</item>
+        <item>DIC</item>
+    </string-array>
+    <string-array name="days_of_week">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string name="open_navigation_drawer">Abre la barra lateral de navegación</string>
+    <string name="close_navigation_drawer">Cierra la barra lateral de navegación</string>
+    <string name="first_course">Primer plato</string>
+    <string name="second_course">Segundo plato</string>
+    <string name="dessert">Postre</string>
+    <string name="lunch">Comida</string>
+    <string name="dinner">Cena</string>
+    <string name="generate_menu_for">¿Generar menú para… ?</string>
+    <string name="keep_selected_recipes">Usar recipes ya seleccionadas</string>
+    <string name="meals_already_set_will_be_kept_and_the_rest_will_be_added">Se mantendrán las recipes ya seleccionadas y se seleccionarán las demás.</string>
+    <string name="meals_already_set_will_be_remove_and_all_will_be_added">Se eliminarán las recipes ya seleccionadas y se creará el menú semanal entero.</string>
+    <string name="current_week">Semana actual</string>
+    <string name="next_week">Próxima semana</string>
+    <string name="very_low_nutritional_scoring">Deberías revisarlo</string>
+    <string name="low_nutritional_scoring">Se puede mejorar</string>
+    <string name="medium_nutritional_scoring">No está mal</string>
+    <string name="high_nutritional_scoring">Muy bueno</string>
+    <string name="very_high_nutritional_scoring">Cheftastico (:=3</string>
+    <string name="values">Valores</string>
+    <string name="nutritional_scoring">Valor nutricional</string>
+    <string name="icon">Icono</string>
+    <string name="version">versión</string>
+    <string name="comments_and_feedback">Comentarios y sugerencias:</string>
+    <string name="information">Información</string>
+    <string name="remove_recipe_from_menu">Quitar receta del menú</string>
+    <string name="change_recipe">Cambiar receta</string>
+    <string name="propose_weekly_menu">Generar menú semanal</string>
+    <string name="People">Personas</string>
+    <string name="we_will_cook_for_one_person">Cocinaremos para 1 persona</string>
+    <string name="keep_always_selected_recipes">Usar siempre recipes ya seleccionadas</string>
+    <string name="update_data_only_with_wifi">Actualizar datos solo por WiFi</string>
+    <string name="data_connection_will_be_used_to_download_new_recipes">Se usará la conexión de datos para descargar nuevas recipes.</string>
+    <string name="data_connection_wont_be_used_to_download_new_recipes">No se usará la conexión de datos para descargar nuevas recipes.</string>
+    <string name="recipes_and_menu">Recetas y Menús</string>
+    <string name="others">Otros</string>
+</resources>

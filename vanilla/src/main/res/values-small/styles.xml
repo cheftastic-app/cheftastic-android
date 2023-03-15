@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="TextAppearanceDayView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearanceDayView.Large">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearanceDayView.Medium">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearanceDayView.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+</resources>

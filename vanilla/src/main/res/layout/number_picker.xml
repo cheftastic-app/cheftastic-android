@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <app.cheftastic.vanilla.widgets.numberPicker.NumberPickerButton
+        android:id="@+id/increment"
+        style="@style/NumberPickerUpButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/numpicker_input"
+        style="@style/NumberPickerInputText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <app.cheftastic.vanilla.widgets.numberPicker.NumberPickerButton
+        android:id="@+id/decrement"
+        style="@style/NumberPickerDownButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</merge>

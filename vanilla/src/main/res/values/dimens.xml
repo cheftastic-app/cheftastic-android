@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_regular">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_activity">16dp</dimen>
+    <dimen name="nav_bar_width">240dp</dimen>
+    <dimen name="view_nutritional_info_summary_deviation">12sp</dimen>
+    <dimen name="view_nutritional_info_summary_percentage">15sp</dimen>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_regular">
+
+    <LinearLayout
+        android:id="@+id/view_menu_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/view_menu_day_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_regular"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ScrollView
+            android:id="@+id/view_menu_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_regular"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_large">
+
+                <TextView
+                    android:id="@+id/view_menu_lunch_section"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lunch" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_lunch_starter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_first_course"
+                    app:mealId="@integer/lunch_id"
+                    app:categoryName="@string/first_course" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_lunch_principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_second_course"
+                    app:mealId="@integer/lunch_id"
+                    app:categoryName="@string/second_course" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_lunch_dessert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_dessert"
+                    app:mealId="@integer/lunch_id"
+                    app:categoryName="@string/dessert" />
+
+                <TextView
+                    android:id="@+id/view_menu_dinner_section"
+                    style="?android:attr/listSeparatorTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dinner" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_diner_starter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_first_course"
+                    app:mealId="@integer/dinner_id"
+                    app:categoryName="@string/first_course" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_diner_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_second_course"
+                    app:mealId="@integer/dinner_id"
+                    app:categoryName="@string/second_course" />
+
+                <app.cheftastic.vanilla.widgets.menu.ViewMenuRecipe
+                    android:id="@+id/view_menu_diner_dessert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:categoryId="@integer/recipe_category_dessert"
+                    app:mealId="@integer/dinner_id"
+                    app:categoryName="@string/dessert" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/view_menu_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="lunch_id">1</integer>
+    <integer name="dinner_id">2</integer>
+    <integer name="recipe_category_first_course">2</integer>
+    <integer name="recipe_category_second_course">3</integer>
+    <integer name="recipe_category_dessert">5</integer>
+</resources>

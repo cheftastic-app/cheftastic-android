@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_week_picker_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/vertical_divider"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_regular"
+    android:showDividers="middle">
+
+    <RadioGroup
+        android:id="@+id/dialog_week_picker_radio_group_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/dialog_fragment_week_picker_radio_button_current_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_regular"
+                android:text="@string/current_week" />
+
+            <TextView
+                android:id="@+id/dialog_fragment_week_picker_text_view_current_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_regular"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/dialog_fragment_week_picker_radio_button_next_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next_week" />
+
+            <TextView
+                android:id="@+id/dialog_fragment_week_picker_text_view_next_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_regular"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/dialog_fragment_week_picker_container_keep_recipes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/margin_regular"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/dialog_week_picker_check_box_keep_recipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/keep_selected_recipes" />
+
+        <TextView
+            android:id="@+id/dialog_week_picker_text_view_keep_recipes_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="@string/meals_already_set_will_be_remove_and_all_will_be_added"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_recipe_step_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:baselineAligned="false"
+    android:divider="@drawable/horizontal_divider"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_regular"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/list_item_recipe_step_description"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:text="@string/recipe_step_description"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/list_item_recipe_step_container_duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/list_item_recipe_step_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/zero_integer"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/list_item_recipe_step_duration_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/unit_of_time"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+</LinearLayout>

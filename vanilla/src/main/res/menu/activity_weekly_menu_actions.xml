@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cheftastic="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/activity_weekly_menu_actions_generate_menu"
+        android:icon="@drawable/btn_magic_wand_light"
+        android:title="@string/propose_weekly_menu"
+        cheftastic:showAsAction="always" />
+</menu>

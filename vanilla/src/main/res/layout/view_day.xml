@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/item_day_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="00"
+        android:textAppearance="@style/TextAppearanceDayView.Large" />
+
+    <TextView
+        android:id="@+id/item_month_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="ENE"
+        android:textAppearance="@style/TextAppearanceDayView.Small" />
+
+    <View
+        android:id="@+id/item_selection_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_day_indicator_off"
+        android:background="@drawable/r_emerald" />
+</merge>

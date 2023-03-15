@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray_darkest">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_load_data_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="Roboto, Arial, SansSerif"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/almost_white"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/fragment_load_data_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="Roboto, Arial, SansSerif"
+            android:text="@string/loading_data_message"
+            android:textColor="@color/almost_white" />
+
+        <ProgressBar
+            android:id="@+id/fragment_load_data_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="16dp"
+            android:maxHeight="16dp"
+            android:minHeight="16dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_bar_green"
+            android:secondaryProgress="0"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_load_data_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="@dimen/margin_regular"
+        android:fontFamily="Roboto, Arial, SansSerif"
+        android:text="@string/version_number"
+        android:textColor="@color/almost_white" />
+</FrameLayout>

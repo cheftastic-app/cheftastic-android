@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_day_width">70dp</dimen>
+    <dimen name="view_day_height">70dp</dimen>
+    <dimen name="view_day_indicator_off">2dp</dimen>
+    <dimen name="view_day_indicator_on">8dp</dimen>
+    <dimen name="widget_week_height">70dp</dimen>
+</resources>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_lighter">
+
+    <ProgressBar
+        android:id="@+id/fragment_nutritional_info_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/fragment_nutritional_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_large"
+            android:layout_weight="1">
+
+            <app.cheftastic.vanilla.widgets.CircularGraph
+                android:id="@+id/fragment_nutritional_info_graph"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_nutritional_info_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fifty_percent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/red_dark" />
+
+                <TextView
+                    android:id="@+id/fragment_nutritional_info_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/very_low_nutritional_scoring"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/red_dark" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_large"
+            android:layout_weight="1"
+            android:background="@drawable/card_regular">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_regular"
+                android:layout_marginRight="@dimen/margin_regular"
+                android:layout_marginTop="@dimen/margin_large"
+                android:divider="@drawable/vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <TextView
+                    android:id="@+id/fragment_nutritional_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_regular"
+                    android:text="@string/values"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="italic" />
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/margin_regular">
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_regular">
+
+                        <TableRow android:layout_marginBottom="@dimen/margin_large">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_1_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/blue_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_1_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_1_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_1_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="@dimen/margin_large">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_2_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/purple_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_2_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_2_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_2_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="@dimen/margin_large">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_3_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/green_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_3_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_3_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_3_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="@dimen/margin_large">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_4_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/orange_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_4_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_4_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_4_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="@dimen/margin_large">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_5_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/emerald_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_5_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_5_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_5_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_regular"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_6_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/name"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="@color/red_dark" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_6_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/description"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_weight="0"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_6_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                                <TextView
+                                    android:id="@+id/fragment_nutritional_info_group_6_deviation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top|center_horizontal"
+                                    android:text="@string/fifty_percent"
+                                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                            </LinearLayout>
+                        </TableRow>
+                    </TableLayout>
+                </ScrollView>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

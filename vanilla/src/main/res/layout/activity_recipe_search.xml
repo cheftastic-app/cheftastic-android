@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recipe_search_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.cheftastic.vanilla.RecipeSearchActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_recipe_search_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/activity_recipe_search_horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <TabHost
+                android:id="@+id/activity_recipe_search_tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:tabStripEnabled="false" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </TabHost>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/activity_recipe_search_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/activity_recipe_search_fragment_recipe_list_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/activity_recipe_search_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/activity_recipe_search_fragment_recipe_info_container"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:background="@color/gray_lighter" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/activity_recipe_search_fragment_nav_bar"
+        android:name="app.cheftastic.vanilla.fragments.NavBarFragment"
+        android:layout_width="@dimen/nav_bar_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+</android.support.v4.widget.DrawerLayout>
