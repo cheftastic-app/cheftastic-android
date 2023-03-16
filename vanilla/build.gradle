@@ -1,28 +1,36 @@
-apply plugin: 'android'
+plugins {
+    id "com.android.application"
+}
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    namespace "app.cheftastic"
+    compileSdk 33
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 19
+        applicationId "app.cheftastic"
+        minSdk 19
+        targetSdk 33
         versionCode 1
         versionName "0.1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    compile 'com.android.support:gridlayout-v7:19.0.1'
-    compile 'com.android.support:support-v4:19.1.0'
-    compile 'com.android.support:appcompat-v7:19.1.0'
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
 }

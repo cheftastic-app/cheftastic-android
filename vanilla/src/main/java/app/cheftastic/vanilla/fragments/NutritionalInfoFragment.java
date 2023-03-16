@@ -2,13 +2,14 @@ package app.cheftastic.vanilla.fragments;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import app.cheftastic.R;
 import app.cheftastic.vanilla.model.NutritionalGroup;

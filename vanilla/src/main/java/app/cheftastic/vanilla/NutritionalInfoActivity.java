@@ -1,13 +1,14 @@
 package app.cheftastic.vanilla;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import app.cheftastic.R;
 import app.cheftastic.vanilla.fragments.NutritionalInfoFragment;
 
-public class NutritionalInfoActivity extends ActionBarActivity {
+public class NutritionalInfoActivity extends AppCompatActivity {
     public static final String ARG_DAY_OF_WEEK_ID = "nutritional_info_activity_day_of_week_id";
     NutritionalInfoFragment fragment;
 

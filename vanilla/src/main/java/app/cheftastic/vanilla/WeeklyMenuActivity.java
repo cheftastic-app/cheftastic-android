@@ -3,18 +3,19 @@ package app.cheftastic.vanilla;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import app.cheftastic.R;
 import app.cheftastic.vanilla.fragments.NavBarFragment;
 import app.cheftastic.vanilla.fragments.WeeklyMenuFragment;
 import app.cheftastic.vanilla.fragments.WeekSelectorDialogFragment;
 
-public class WeeklyMenuActivity extends ActionBarActivity
+public class WeeklyMenuActivity extends AppCompatActivity
         implements WeekSelectorDialogFragment.WeekSelectorDialogFragmentHandler {
 
     private WeeklyMenuFragment weeklyMenuFragment;

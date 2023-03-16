@@ -31,7 +31,6 @@
     <style name="CheftasticTheme.SplashScreen">
         <item name="android:windowActionBar">false</item>
         <item name="android:background">@color/gray_darkest</item>
-        <item name="windowActionBar">false</item>
         <item name="background">@color/gray_darkest</item>
     </style>
 

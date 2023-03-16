@@ -3,20 +3,21 @@ package app.cheftastic.vanilla;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.view.ActionMode;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionMode;
+
 import app.cheftastic.R;
 import app.cheftastic.vanilla.exceptions.ArgumentExpectedException;
 import app.cheftastic.vanilla.fragments.RecipeInfoFragment;
 import app.cheftastic.vanilla.fragments.RecipeListFragment;
 
-public class RecipeSelectorActivity extends ActionBarActivity
+public class RecipeSelectorActivity extends AppCompatActivity
         implements RecipeListFragment.OnItemSelectedListener {
 
     public static final String ARG_DAY_ID = "recipe_selector_activity_arg_day_id";

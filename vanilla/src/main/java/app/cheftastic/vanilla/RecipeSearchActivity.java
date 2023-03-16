@@ -2,23 +2,24 @@ package app.cheftastic.vanilla;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import app.cheftastic.R;
 import app.cheftastic.vanilla.fragments.NavBarFragment;
 import app.cheftastic.vanilla.fragments.RecipeInfoFragment;
 import app.cheftastic.vanilla.fragments.RecipeListFragment;
 
-public class RecipeSearchActivity extends ActionBarActivity
+public class RecipeSearchActivity extends AppCompatActivity
         implements RecipeListFragment.OnItemSelectedListener {
 
     private static final String STATE_DISPLAYING_RECIPE = "recipe_search_activity_state_displaying_recipe";

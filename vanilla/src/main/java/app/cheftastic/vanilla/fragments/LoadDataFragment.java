@@ -9,21 +9,18 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
+import androidx.fragment.app.Fragment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -203,10 +200,19 @@ public class LoadDataFragment extends Fragment {
                 if (wifi != null && (wifi.isConnected() || !Settings.getUseOnlyWifi())) {
                     String response = null;
                     try {
-                        DefaultHttpClient httpClient = new DefaultHttpClient();
-                        HttpGet httpGet = new HttpGet(App.WEB_SERVICE_URL + App.WEB_SERVICE_UPDATER + App.WEB_SERVICE_PARAMS_PREFIX + App.WEB_SERVICE_UPDATER_PARAM_LAST_UPDATED + getLastDataUpdated());
-                        HttpResponse httpResponse = httpClient.execute(httpGet);
-                        response = EntityUtils.toString(httpResponse.getEntity());
+                        URL url = new URL(App.WEB_SERVICE_URL + App.WEB_SERVICE_UPDATER + App.WEB_SERVICE_PARAMS_PREFIX + App.WEB_SERVICE_UPDATER_PARAM_LAST_UPDATED + getLastDataUpdated());
+                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                        connection.setRequestMethod("GET");
+                        if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                            String inputLine;
+                            StringBuffer buffer = new StringBuffer();
+                            while ((inputLine = reader.readLine()) != null) {
+                                buffer.append(inputLine);
+                            }
+                            connection.connect();
+                            response = buffer.toString();
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
